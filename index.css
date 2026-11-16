@@ -1,0 +1,49 @@
+* { box-sizing: border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #eef1f5;
+}
+
+h1 { text-align: center; }
+
+/* Контейнер: блоки з users по 2 в рядок */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Блок користувача: кнопка розташована під інформацією */
+.block {
+    width: calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #c8d0da;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-wrap: anywhere;
+}
+
+.block p { margin: 5px 0; }
+
+.btn {
+    align-self: flex-start;
+    margin-top: auto;
+    background: #3b6ea5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 8px 14px;
+    font-size: 14px;
+}
+.btn:hover { background: #2a5280; }
+
+/* Мобільні екрани: по 1 в рядок */
+@media (max-width: 600px) {
+    .block { width: 100%; }
+}
